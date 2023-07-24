@@ -21,6 +21,17 @@ class DynamicConfigServiceProvider extends ServiceProvider
     public function boot(): void
     {
         resolve(DynamicConfigService::class);
+
+        $this->publish();
+    }
+
+    private function publish(): void
+    {
+        if (app()->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/database/migrations/' => database_path('migrations/dynamic-config'),
+            ], 'dynamic-config-migrations');
+        }
     }
 
 }
