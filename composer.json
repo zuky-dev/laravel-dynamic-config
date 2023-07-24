@@ -1,0 +1,24 @@
+{
+    "name": "zuky-dev/laravel-dynamic-config",
+    "description": "Laravel config method extension so that some config keys can be written in database and therefore could be dynamically changed",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "zukyDev\\DynamicConfig\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "zukyDev\\DynamicConfig\\DynamicConfigServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "zuky",
+            "email": "zuky.dev@gmail.com"
+        }
+    ],
+    "require": {}
+}
